@@ -16,8 +16,8 @@ import mh_z19
 #Enter your wifi SSID and password below.
 # wifi_ssid = "IZZI-B10C-5G"
 # wifi_password = "hHqKtA2cGf232RJJYA"
-wifi_ssid = "Totalplay-2.4G-fee0"
-wifi_password = "UUuQkjdK56LGPyjX"
+wifi_ssid = "CNAD_2025_5G"
+wifi_password = "CNAD2025$$"
 
 #Enter your AWS IoT endpoint. You can find it in the Settings page of
 #your AWS IoT Core console. 
@@ -64,8 +64,10 @@ wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 if not wlan.isconnected():
     print('Connecting to network...')
+    print("Charly...")
     wlan.connect(wifi_ssid, wifi_password)
     while not wlan.isconnected():
+        print("Charly...")
         pass
 
     print('Connection successful')
